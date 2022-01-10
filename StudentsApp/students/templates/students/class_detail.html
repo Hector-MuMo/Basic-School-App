@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Estudiante</title>
+</head>
+<body>
+<h2>Detalle de la clase {{class.subject}}:</h2>
+
+<span style="display:block">Materia: {{class.subject}}</span>
+<span style="display:block">Semestre: {{class.semester}}</span>
+<span style="display:block">Formación: {{class.formation}}</span>
+<div style="display:block">Estudiantes:
+    <ul>
+        {% for student in class.students.all%}
+        <li>{{student}}</li>
+        {%endfor%}
+    </ul>
+</div>
+<div style="display:block">Profesores:
+    <ul>
+        {% for teacher in class.techars.all%}
+        <li>{{teacher}}</li>
+        {%endfor%}
+    </ul>
+</div>
+
+
+<button><a href="/school/classes/">Regresar</a></button>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clases</title>
+</head>
+<body>
+<h2>Lista Clases</h2>
+<ul>
+    {% for class in classes %}
+    <li><a href="{{class.id}}">{{class.subject}}</a></li>
+    {%endfor%}
+</ul>
+{% include "pagination.html" with page=page_obj%}
+<button><a href="/school/">Home</a></button>
+</body>
+</html>

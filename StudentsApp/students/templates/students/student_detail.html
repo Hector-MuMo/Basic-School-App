@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Estudiante</title>
+</head>
+<body>
+<h2>Detalle del Estudiante {{student.first_name}}:</h2>
+
+<span style="display:block">Nombre: {{student.first_name}}</span>
+<span style="display:block">Apellido: {{student.last_name}}</span>
+<span style="display:block">E-mail: {{student.email}}</span>
+<span style="display:block">Edad: {{student.age}}</span>
+<span style="display:block">Matricula: {{student.enrollment}}</span>
+<span style="display:block">Semestre: {{student.semester}}</span>
+<span style="display:block">Activo: {{student.active}}</span>
+
+<br/>
+<img style="display:block" src="{{ MEDIA_URL }}{{ student.photo }}" alt="avatar">
+<br/>
+
+<button><a href="/school/students/">Regresar</a></button>
+</body>
+</html>
